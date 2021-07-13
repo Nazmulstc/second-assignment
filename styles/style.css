@@ -1,0 +1,82 @@
+/* Google Font link */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* Common or utilities style  */
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.containar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2D25A0;
+    height: 670px;
+}
+.flaxible{
+    display: flex;
+    align-items: center;
+}
+
+/* Header-top or Menu area styles start */
+
+.header-top{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 120px;
+}
+.menu-left ul{
+    display: flex;
+    padding: 10px 0;
+}
+.menu-left ul li{
+    list-style: none;
+}
+.menu-left ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    margin-right: 36px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+a.active,a:hover{
+    background: #1b9bff;
+    transition: .5s;
+  }
+.btn{
+    width: 123px;
+    display: flex;
+    align-items: center;
+    background-color: #E02C6D;
+    color: white;
+    padding: 10px 24px;
+}
+.btn .fas{
+    width: 24px;
+    height: 20;
+    margin: 0 4px;
+}
+.button{
+    font-size: 16px;
+}
+
+/* Header-bottom area style start */
+
+
+.header-bottom-left h1{
+    color: white;
+    font-size: 64px;
+}
+.header-bottom-left a{
+    text-decoration: none;
+    color: white;
+    background-color: #E02C6D;
+}
+.header-bottom-right img{
+    width: 500px;
+    height: 100%;
+}
