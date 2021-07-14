@@ -2,31 +2,44 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
-/* Common or utilities style  */
+/* Common or utilities styles start here  */
 
 body{
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    background-color: #FFFFFF;
 }
 .containar{
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #2D25A0;
-    height: 670px;
     margin-bottom: 70px;
+    padding-bottom: 70px;
 }
 .flaxible{
     display: flex;
-    align-items: center;
+    justify-content: center;
+}
+.left-side{
+    width: 50%;
+    height: 100%;
+}
+.right-side{
+    width: 50%;
+    height: 100%;
 }
 
-/* Header-top or Menu area styles start */
+
+/* Common or utilities styles end here 
+---------------------------------------
+ Header-top or Menu area styles start */
 
 .header-top{
     display: flex;
     justify-content: space-between;
+    width: 65%;
     margin: 40px 120px;
 }
 .menu-left ul{
@@ -44,7 +57,7 @@ body{
     border-radius: 3px;
     text-transform: uppercase;
 }
-a.active,a:hover{
+a.active,ul li a:hover{
     background: #1b9bff;
     transition: .5s;
   }
@@ -53,8 +66,16 @@ a.active,a:hover{
     display: flex;
     align-items: center;
     background-color: #E02C6D;
-    color: white;
     padding: 10px 24px;
+    cursor: pointer;
+}
+.btn a{
+    text-decoration: none;
+    color: white;
+}
+.btn:hover{
+    background: linear-gradient(blue, orange);
+    transition: 0.5s;
 }
 .btn .fas{
     width: 24px;
@@ -64,46 +85,55 @@ a.active,a:hover{
 .button{
     font-size: 16px;
 }
+/* Header-top or Menu area styles end here 
+-------------------------------------------
+Header-bottom area styles start here */
 
-/* Header-bottom area style start */
-
-
-.header-bottom-left h1{
+.header-bottom{
+    width: 65%;
+}
+.header-bottom h1{
     color: white;
     font-size: 64px;
 }
-.header-bottom-left a{
+.header-bottom a{
     text-decoration: none;
     color: white;
     background-color: #E02C6D;
 }
-.header-bottom-right img{
-    width: 500px;
+.right-side img{
+    width: 550px;
     height: 100%;
 }
+.containar:hover .right-side img{
+    transform:scale(1.3) ;
+    transition: transform 2s ease-in ;
+}
 
-/* Header area style end here */
-
-/* Blog style start here */
+/* Header area styles end here 
+--------------------------------
+Blog  area styles start here */
 
 .blog-containar{
-    background-color: #FBFBFB;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .blogs{
     width: 1050px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    align-items: center;
     grid-row-gap: 27px;
     grid-column-gap: 27px;
-    justify-items: center;
-    /* align-items: center; */
-    
-    
+    margin-bottom: 160px;
 }
 .blog{
+    height: 470px;
     padding: 15px;
     background-color: #FFFFFF;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+    overflow: hidden;  /*Text কম বেশি এর কারণে আপাদত Overflow-hidden করে রাখা হয়েছে*/
 }
 .blog img{
     width: 300px;
@@ -117,4 +147,169 @@ a.active,a:hover{
 .player-description{
     font-size: 16px;
     color: #6C6C6C;
+}
+.blog:hover img{
+    transform:scale(1.3) ;
+    transition: transform 2s ease-in ;
+}
+
+/* Blog bottom style start here */
+
+.blog-bottom{
+    width: 1050px;
+    margin-bottom: 50px;
+}
+.blog-bottom h1{
+    font-size: 48px;
+    color: #0A0826;
+}
+.blog-bottom p{
+    color: #6C6C6C;
+    font-size: 16px;
+}
+
+/* Blog bottom styles end here 
+------------------------------
+Extra Item 01 or match schedule styles start here */
+
+.match-schedule{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.animatet-text{
+    font-size: 40px;
+    position: relative;
+    color:  orange;
+}
+.animatet-text{
+    animation-duration: 3s;
+    animation-name: slide;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  @keyframes slide {
+    from {
+      margin-left: 100%;
+      width: 50%;
+    }
+  
+    to {
+      margin-left: 20%;
+      width: 100%;
+    }
+  }
+
+.match-schedule a{
+    text-decoration: none;
+}
+.matchs{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.match{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+}
+
+/* Extra Item 01 or match schedule styles end here 
+-------------------------------------------------
+Extra Item 02 or News styles Start here */
+
+.new-wraper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.news-blog{
+    display: flex;
+    width: 65%;
+    height: 200px;
+    align-items: center;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.news a{
+    font-size: 30px;
+    text-decoration: none;
+}
+.thamnail img{
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+}
+
+/* Extra Item 02 or News styles end here 
+--------------------------------------
+Footer area styles start here */
+
+.foot-wraper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.foot-wraper img{
+    width: 480px;
+    height: 110px;
+}
+.social-icon{
+    display: flex;
+    justify-content: space-between;
+    width: 170px;
+}
+.social-icon i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #E7E7E8;
+    color: #969BAB;
+}
+
+/* Footer area styles end here
+------------------------------
+Responsive CSS */
+
+@media screen and (max-width: 688px) {
+
+.flaxible, .header-top, .menu-left ul, .blog-containar{
+    display: block;
+}
+.header-bottom{
+    width: 100%;
+}
+.header-bottom h1{
+    color: white;
+    font-size: 30px;
+    align-items: center;
+}
+
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 27px;
+    width: 100%;
+}
+.blog{
+    padding: 15px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+    overflow: visible;
+}
+.social-icon, .match-schedule, .matchs, .match, .new-wraper, .news-blog{
+    display: none;
+}
+}
+
+@media screen and (max-width: 992px){
+
 }
